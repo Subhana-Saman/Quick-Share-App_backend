@@ -6,8 +6,9 @@ const app = express();
 // Middleware
 // Backend code mein
 app.use(cors({
-  origin: 'https://your-frontend-link.vercel.app',
-  methods: ["GET", "POST"]
+  origin: 'https://quick-share-app-frontend.vercel.app', 
+  methods: ["GET", "POST"],
+  credentials: true
 }));
 app.use(express.json());
 // MongoDB Connection
