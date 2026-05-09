@@ -4,7 +4,11 @@ const cors = require('cors');
 require('dotenv').config();
 const app = express();
 // Middleware
-app.use(cors());
+// Backend code mein
+app.use(cors({
+  origin: 'https://your-frontend-link.vercel.app',
+  methods: ["GET", "POST"]
+}));
 app.use(express.json());
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI)
